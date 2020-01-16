@@ -1,7 +1,6 @@
 terraform {
   backend "s3" {
     bucket = "terraform-state.imperial.galactic.gov"
-    key = "production/s3-drop-off/tf.state"
     region = "us-east-2"
   }
 }
