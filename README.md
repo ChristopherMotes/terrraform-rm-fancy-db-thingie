@@ -1,6 +1,12 @@
 #
 ## To init
-terraform init -backend-config="key=production/s3-drop-off/tf.state"## Providers
+```
+export environment=<env>
+export project=<proj>
+rm -rf .terraform/ ; terraform init -backend-config="key=${environment}/${project}/tf.state"
+```
+
+## Providers
 
 No provider.
 
