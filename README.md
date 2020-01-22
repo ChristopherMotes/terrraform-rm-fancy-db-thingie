@@ -5,7 +5,9 @@ The start of a fancy-pants db thingie
 ```
 export environment=<env>
 export project=<proj>
-rm -rf .terraform/ ; terraform init -backend-config="key=${environment}/${project}/tf.state"
+export tfBucket=<terraform bucket name>
+export region=<region of terraform bucket>
+rm -rf .terraform/ ; terraform init -backend-config "bucket=${tfBucket}" -backend-config="key=${environment}/${project}/tf.state" --backend-config="region=${region}"
 ```
 
 ## To execute
